@@ -139,7 +139,8 @@ a.anchor {
 }
 
 footer {
-  background-color: var(--color-text-gray);
+  background-color: var(--color-primary);
+  color: white;
   text-align: center;
   padding: 16px;
 }

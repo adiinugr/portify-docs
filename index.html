@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karna - Documentation</title>
+    <title>Portify - Documentation</title>
     <link rel="shortcut icon" href="/images/favicon.ico" />
 
     <!-- Start Google Font -->
@@ -40,14 +40,6 @@
       <nav id="nav" class="nav">
         <ul class="nav__list">
           <li><a class="nav__link" href="#installation">Installation</a></li>
-          <li>
-            <a class="nav__link" href="#folder-structure">Folder Structure</a>
-          </li>
-          <li>
-            <a class="nav__link" href="#theme-configuration"
-              >Theme Configuration</a
-            >
-          </li>
           <li><a class="nav__link" href="#dependencies">Dependencies</a></li>
         </ul>
       </nav>
@@ -59,10 +51,12 @@
     <section>
       <h1>Installation</h1>
       <p>
-        Karna Portfolio is built using Create Next App. Create Next Aapp is
-        nicely documented to start. You don't need to install or configure tools
-        like Webpack or Babel. They are preconfigured and hidden so that you can
-        focus on the code.
+        Portify Portfolio is built using Parcel. Parcel is a zero configuration
+        build tool for the web. It combines a great out-of-the-box development
+        experience with a scalable architecture that can take your project from
+        just getting started to massive production application. You can see the
+        official
+        <a href="https://parceljs.org/" target="_blank">documentation here</a>
       </p>
       <h2>Guide</h2>
       <p>
@@ -71,7 +65,6 @@
         <a href="https://www.npmjs.com/" target="_blank">npm</a>/
         <a href="https://yarnpkg.com/" target="_blank">yarn</a>
       </p>
-      <p class="tip">Yarn package manager is recommended</p>
       <ul class="step">
         <li>
           After downloading zip from ThemeForest, unzip it in your desired
@@ -79,14 +72,13 @@
         </li>
         <li>
           In uncompressed folder you will find folder named
-          <code> karna-portfolio-vX.X.X.</code>.Open this folder in console /
-          terminal.
+          <code> portify-vX.X.X.</code>.Open this folder in console / terminal.
         </li>
       </ul>
 
       <!-- Installation Code -->
       <pre>
-        <code># For Yarn (Highly Recommended)
+        <code># For Yarn
 yarn
 
 # For npm
@@ -94,7 +86,7 @@ npm install --force --legacy-peer-deps</code>
       </pre>
       <!-- End Installation Code -->
       <ul class="step">
-        <li>Now to run development server of Karna, run below command:</li>
+        <li>Now to run development server of Portify, run below command:</li>
       </ul>
       <!-- Run Code -->
       <pre>
@@ -107,196 +99,10 @@ npm run start</code>
       <!-- End Run Code -->
 
       <ul class="step">
-        <li>
-          Visit <a href="http://localhost:3000/">http://localhost:3000/</a> to
-          check frontend.
-        </li>
+        <li>It will automatically open the page in new browser tab.</li>
       </ul>
     </section>
     <!-- End Installation -->
-
-    <!-- Start Folder Structure -->
-    <a class="anchor" id="folder-structure"></a>
-    <section>
-      <h1>Folder Structure</h1>
-      <p>
-        Once you unzip the package from ThemeForest you will find a folder named
-        <code>karna</code> folder which contains actual files and folders
-        required to run Karna Portfolio.
-      </p>
-
-      <!-- Folder Structure -->
-      <pre>
-        <code>
-|-- components/
-| |-- animations            -> Page animation
-| |-- button                -> Button components
-| |-- card                  -> Card components
-| |-- menu                  -> Menu components
-| |-- meta                  -> Head component for meta HTML
-| |-- visual                -> Visualization components
-|-- context/                -> React context
-|-- data/                   -> Dummy data
-|-- pages/
-| |-- api/                  -> API directory for backend (not used in this case)
-| |-- personal-dark         -> Personal dark page
-| |-- personal-light        -> Personal dark page
-| |-- _app.js
-| |-- index.js
-|-- public/
-| |-- images                -> Images
-| |-- template              -> Template images for demo
-| |-- favicon.ico           
-|-- styles/
-| |-- global.css            -> Main CSS file
-|-- .eslintrc.json          -> Eslint
-|-- jsconfig.json           -> In this case is used for absolute import
-|-- next.config.js          -> Next Js config file
-|-- package.json            
-|-- postcss.config.js       -> Post CSS config file    
-|-- tailwind.config.js      -> Tailwind config file     
-        </code>
-      </pre>
-      <!-- End Folder Structure -->
-
-      <ul class="step">
-        <li>components</li>
-        <p>
-          It contains core component of template. Make sure to check them all in
-          our custom components section.
-        </p>
-        <li>pages</li>
-        <p>It contains pages file. Each page represent one diferent layout.</p>
-      </ul>
-    </section>
-    <!-- End Folder Structure -->
-
-    <!-- Start Theme Configuration -->
-    <a class="anchor" id="theme-configuration"></a>
-    <section id="theme-configuration">
-      <h1>Theme Configuration</h1>
-      <h2>1. styles/global.css</h2>
-      <p>
-        Main files to customize the theme is <code>styles/global.css</code> and
-        <code>tailwind.config.js</code>. Remember, this template use
-        <a href="https://tailwindcss.com/" target="_blank">Tailwind</a> as main
-        CSS framework.
-      </p>
-      <pre>
-        <code>
-:root {
-/* THEME COLOR */
-/* Note: Color should in RGB format, otherwise tailwind opacity won't works!! */
-
-  --color-text-inverted: 255, 255, 255;
-  --color-text-base: 255, 255, 255;
-  --color-text-button-base: 255, 255, 255;
-  --color-text-accent: 46, 196, 182;
-  --color-text-button-inverted: 6, 196, 182;
-
-  --color-bg-accent: 46, 196, 182;
-  --color-bg-base: 6, 25, 23;
-  --color-bg-gray: 48, 52, 52;
-  --color-button-bg-inverted: 255, 255, 255;
-  --color-button-bg-base: 46, 196, 182;
-
-  --color-border-gray: 76, 78, 82;
-  --color-border-base: 46, 196, 182;
-}
-.theme-light {
-/* THEME COLOR */
-/* Note: Color should in RGB format, otherwise tailwind opacity won't works!! */
-
-  --color-text-base: 59, 59, 59;
-  --color-text-inverted: 255, 255, 255;
-  --color-text-accent: 46, 196, 182;
-  --color-text-button-base: 255, 255, 255;
-  --color-text-button-inverted: 76, 78, 82;
-
-  --color-bg-base: 255, 255, 255;
-  --color-bg-accent: 46, 196, 182;
-  --color-bg-gray: 244, 244, 244;
-
-  --color-button-bg-base: 46, 196, 182;
-  --color-button-bg-inverted: 236, 236, 236;
-
-  --color-border-base: 46, 196, 182;
-  --color-border-gray: 169, 169, 169;
-}
-        </code>
-      </pre>
-      <p class="warning">
-        The color should be in <strong>RGB format</strong>, otherwise tailwind
-        opacity will not works.
-      </p>
-      <p>
-        You can add theme class like theme-light or theme-blue. Don't forget to
-        add class to the components. For example <em>theme-light</em>
-      </p>
-      <pre>
-        <code class="language-html">
-&lt;section className="theme-light bg-skin-base h-screen"&gt;
-  ...
-&lt;/section&gt;
-        </code>
-      </pre>
-
-      <h2>2. tailwind.config.js</h2>
-      Basically this is tailwind configuration file. You can see the official
-      guide
-      <a href="https://tailwindcss.com/docs/configuration" target="_blank"
-        >here</a
-      >.
-      <pre>
-        <code>
-module.exports = {
-  ...
-  theme: {
-    extend: {
-      textColor: {
-        skin: {
-          base: withOpacity("--color-text-base"),
-          inverted: withOpacity("--color-text-inverted"),
-          accent: withOpacity("--color-text-accent"),
-          "button-base": withOpacity("--color-text-button-base"),
-          "button-inverted": withOpacity("--color-text-button-inverted")
-        }
-      },
-      backgroundColor: {
-        skin: {
-          base: withOpacity("--color-bg-base"),
-          accent: withOpacity("--color-bg-accent"),
-          gray: withOpacity("--color-bg-gray"),
-          "button-bg-base": withOpacity("--color-button-bg-base"),
-          "button-bg-inverted": withOpacity("--color-button-bg-inverted")
-        }
-      },
-      ...
-    }
-  }
-}
-        </code>
-      </pre>
-      <p>
-        We use <code>withOpacity</code> function to create opacity
-        functionality.
-      </p>
-      <pre>
-        <code>
-const withOpacity = (variableName) => {
-  return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
-      return `rgba(var(${variableName}), ${opacityValue})`
-    }
-
-    return `rgb(var(${variableName}))`
-  }
-}
-        </code>
-      </pre>
-      <p>We pass variable name we created in <code>global.css</code> file.</p>
-    </section>
-    <!-- End Theme Configuration -->
 
     <!-- Start Dependencies -->
     <a class="anchor" id="dependencies"></a>
@@ -309,35 +115,20 @@ const withOpacity = (variableName) => {
       </p>
       <pre>
         <code>
-"next",
-"react",
-"react-dom",
-"@tailwindcss/line-clamp",
-"autoprefixer",
-"eslint",
-"eslint-config-next",
-"postcss",
+"@parcel/transformer-sass"
+"@tailwindcss/line-clamp"
+"buffer"
+"parcel"
+"postcss"
 "tailwindcss"
         </code>
       </pre>
       <h2>2. Other Dependencies</h2>
       <pre>
         <code>
-"@hookform/resolvers",
-"framer-motion",
-"hamburger-react",
-"rc-progress",
-"react-hook-form",
-"react-icons",
-"react-modal",
-"react-player",
-"react-scroll",
-"react-slick",
-"react-spinners",
-"react-typed",
-"react-typist",
-"slick-carousel",
-"yup"
+"just-validate"
+"swiper"
+"tw-elements"
         </code>
       </pre>
     </section>
